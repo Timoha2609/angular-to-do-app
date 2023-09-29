@@ -8,6 +8,8 @@
       <th>#</th>
       <th>Task</th>
       <th>Note</th>
+      <th>Status</th>
+      <th>Difficulty</th>
       <th></th>
     </tr>
     </thead>
@@ -16,6 +18,8 @@
       <td>{{ task.id }}</td>
       <td>{{ task.title }}</td>
       <td>{{ task.note }}</td>
+      <td>{{ task.status }}</td>
+      <td>{{ task.difficulty }}</td>
       <td>
         <button class="btn btn-light" [routerLink]="['/tasks/', task.id]"><i class="far fa-eye"></i></button>
         <button class="btn btn-light" (click)="delete(task.id)"><i class="far fa-trash-alt"></i></button>
