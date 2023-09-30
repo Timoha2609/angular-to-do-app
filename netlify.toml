@@ -5,5 +5,5 @@ to = "/"
 status = 200
 
 [build]
-  command = "npm run build"
+  command = "npm run start"
   publish = "dist"
