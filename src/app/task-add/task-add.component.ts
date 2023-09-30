@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./task-add.component.css']
 })
 export class TaskAddComponent {
+  id:number;
 
   title = new FormControl('');
 
@@ -28,7 +29,7 @@ export class TaskAddComponent {
   createTask() {
     this.storage.add({
       id:null,
-      difficulty:this.difficulty.value,
+      difficulty:Number(this.difficulty.value),
       note:this.note.value,
       status:this.status.value,
       title:this.title.value,

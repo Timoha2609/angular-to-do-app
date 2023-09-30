@@ -18,8 +18,13 @@
       <td>{{ task.id }}</td>
       <td>{{ task.title }}</td>
       <td>{{ task.note }}</td>
-      <td>{{ task.status }}</td>
-      <td>{{ task.difficulty }}</td>
+      <td *ngIf="task.status === 'not started'" [style.color]="colorstatus(task.status)">
+      задача не начата
+      </td>
+      <td *ngIf="task.status !== 'not started'" [style.color]="colorstatus(task.status)"> 
+      {{ task.status }}
+      </td>
+      <td>{{stars(task.difficulty)}}</td>
       <td>
         <button class="btn btn-light" [routerLink]="['/tasks/', task.id]"><i class="far fa-eye"></i></button>
         <button class="btn btn-light" (click)="delete(task.id)"><i class="far fa-trash-alt"></i></button>

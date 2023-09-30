@@ -22,6 +22,24 @@ export class TodoComponent implements OnInit {
     this.tasks = this.storage.getTasks();
   }
 
+  colorstatus(status:string):string{
+    if(status==='not started') {return 'red';}
+    else if (status==='pending') {return 'blue'}
+    else if (status==='finished') {return 'green'}
+    else{return ''}
+  }
+
+  stars(difficulty:number):string{
+      if(difficulty===1) {return '★';}
+      else if (difficulty === 2) {return '★★'}
+      else if (difficulty === 3) {return '★★★'}
+      else if (difficulty === 4) {return '★★★★'}
+      else if (difficulty === 5) {return '★★★★★'}
+      else{console.log(typeof(difficulty))}
+    }
+  
+  
+
   /**
    * Remove the tasks from the list
    *
