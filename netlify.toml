@@ -1,5 +1,6 @@
 [[redirects]]
 
+command = "npm run start"
 from = "/*"
 to = "/"
 status = 200
