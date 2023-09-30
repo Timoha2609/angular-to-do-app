@@ -4,6 +4,6 @@ from = "/*"
 to = "/"
 status = 200
 
-[build]
+[start]
   command = "npm run start"
   publish = "dist"
